@@ -1,0 +1,113 @@
+import themes.sbss
+
+$_PREVIEW_EFFECT_SIZE = 150dp
+$_PREVIEW_EFFECT_TOP_MARGIN = 20dp
+$_TOOLBAR_HEIGHT = 80dp
+$_TOOLBAR_BG_HEIGHT = 56dp
+$_TOOLBAR_BG_CENTER_WIDTH = 114dp
+$_PLAY_BUTTON_SIZE = 53dp
+$_PLAY_BUTTON_BOTTOM_MARGIN = 26dp
+$_SIDE_MENU_BUTTON_SIZE = 48dp
+$_SIDE_MENU_BOTTOM_MARGIN = 20dp
+
+#youtube_player {
+    width: (1ph-1eb)*9/16;
+    height: 1ph-1eb;
+    position: absolute;
+    gravity: top;
+    preview-background-color: $COLOR_BLACK;
+}
+
+#effect_preview {
+    width: $_PREVIEW_EFFECT_SIZE;
+    height: $_PREVIEW_EFFECT_SIZE;
+    position: absolute;
+    gravity: center;
+    y: -$_PREVIEW_EFFECT_TOP_MARGIN;
+}
+
+#section_toolbar {
+    width: 1pw;
+    height: $_TOOLBAR_HEIGHT+1eb;
+    position: absolute;
+    gravity: bottom;
+}
+
+#img_toolbar.bg.side {
+    width: (1pw-$_TOOLBAR_BG_CENTER_WIDTH)/2;
+    height: $_TOOLBAR_BG_HEIGHT;
+    scale-mode: scale;
+}
+
+#img_toolbar.bg.center {
+    width: $_TOOLBAR_BG_CENTER_WIDTH;
+    height: $_TOOLBAR_BG_HEIGHT;
+    scale-mode: scale;
+}
+
+#img_toolbar.bg.bottom {
+    width: 1pw;
+    height: 1eb;
+    scale-mode: scale;
+}
+
+#btn_toolbar {
+    width: $_SIDE_MENU_BUTTON_SIZE;
+    height: $_SIDE_MENU_BUTTON_SIZE;
+}
+
+#blank_center {
+    width: $_SIDE_MENU_BUTTON_SIZE;
+    height: $_SIDE_MENU_BUTTON_SIZE;
+}
+
+#btn_play {
+    width: $_PLAY_BUTTON_SIZE;
+    height: $_PLAY_BUTTON_SIZE;
+    position: absolute;
+    gravity: bottom;
+    y: -($_PLAY_BUTTON_BOTTOM_MARGIN+1eb);
+    hides-when-disabled: yes;
+    disables-when-selected: yes;
+}
+
+#btn_sidemenu {
+    width: $_SIDE_MENU_BUTTON_SIZE;
+    height: $_SIDE_MENU_BUTTON_SIZE;
+}
+
+/cell/preview {
+    display: none;
+}
+
+/cell/toolbar {
+    display: none;
+}
+
+/cell/toolbar/background {
+    display: block;
+    position: absolute;
+    gravity: bottom;
+    text-align: justify;
+    text-justify: distribute-all-lines;
+}
+
+/cell/toolbar/buttons {
+    display: block;
+    position: absolute;
+    gravity: bottom;
+    y: -1eb;
+    margin: 0 (1pw-$_SIDE_MENU_BUTTON_SIZE*4)/5;
+    text-align: justify;
+    text-justify: distribute-all-lines;
+}
+
+/cell/sidemenu {
+    display: block;
+    pack: yes;
+    position: absolute;
+    gravity: right-bottom;
+    x: -5dp;
+    y: -($_TOOLBAR_HEIGHT+$_SIDE_MENU_BOTTOM_MARGIN+1eb);
+    paragraph-spacing: 15dp;
+}

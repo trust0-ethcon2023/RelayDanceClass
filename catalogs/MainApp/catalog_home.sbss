@@ -1,0 +1,35 @@
+import themes.sbss
+
+$_UPDATING_MESSAGE_CELL_HEIGHT = 26dp
+$_UPDATING_MESSAGE_CELL_TOP_MARGIN = 5dp
+
+#showcase_home {
+    width: 1pw;
+    height: 1ph;
+    position: absolute;
+    gravity: center;
+    cell-size: 1pw 1ph;
+    preload-count: 1;
+    keep-count: 1;
+    clips-cell-bounds: yes;
+}
+
+#cell_favorites {
+    width: 1pw;
+    height: 1ph;
+    position: absolute;
+    gravity: center;
+}
+
+#cell_updating.message {
+    width: 1pw;
+    height: $_UPDATING_MESSAGE_CELL_HEIGHT;
+    position: absolute;
+    gravity: top;
+    y: 1sbh+$_UPDATING_MESSAGE_CELL_TOP_MARGIN;
+}
+
+/catalog {
+    page-background-color: $THEME_COLOR_BACKGROUND;
+    text-color: $THEME_COLOR_TEXT;
+}

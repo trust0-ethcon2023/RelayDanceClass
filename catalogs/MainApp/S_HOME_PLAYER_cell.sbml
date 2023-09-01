@@ -1,0 +1,41 @@
+=begin cell: script-when-loaded=on_loaded, \
+            data-binding="favorite-${video-id}", script-when-data-changed=on_data_changed
+
+=object showcase: id=showcase.chapters, type=media, name="chapters-${video-id}", data-script=feed_chapters
+
+=object youtube: id="youtube.player", video-id="${video-id}", reuse-id="${video-id}", \
+            autoplay=yes, repeats=yes, blocks-ads=yes, ignores-touches=yes, quality=hd1080, \
+            control-hidden=yes, info-hidden=yes, subtitle-hidden=yes, \
+            preview-section=preview, minimum-preview-time=1, \
+            style=youtube_player
+
+=begin preview: id=preview
+=object effect: type=lottie, filename="preview.json", style=effect_preview
+=end preview
+
+=object section: section=toolbar, style=section_toolbar
+=begin toolbar: id=toolbar
+=begin background
+=(object image: filename=bg_toolbar_line.png, style=img_toolbar.bg.side)=\
+=(object image: filename=bg_toolbar_curve.png, style=img_toolbar.bg.center)=\
+=(object image: filename=bg_toolbar_line.png, style=img_toolbar.bg.side)=
+=(object image: filename=bg_toolbar_line.png, style=img_toolbar.bg.bottom)=
+=end background
+=begin buttons
+=(object button: id=btn.toolbar.repeat, image=toolbar_btn_repeat.png, selected-image=toolbar_btn_repeat_on.png, script=repeat_chapter, style=btn_toolbar)= \
+=(object button: image=toolbar_btn_prev.png, script=prev_chapter, style=btn_toolbar)= \
+=(object blank: style=blank_center)=\
+=(object button: image=toolbar_btn_next.png, script=next_chapter, style=btn_toolbar)= \
+=(object button: image=toolbar_btn_contents.png, script=show_contents, style=btn_toolbar)=
+=end buttons
+=object button: action=play, target=owner, type=play, owner="youtube.player", image=toolbar_btn_play.png, style=btn_play
+=object button: action=pause, target=owner, type=pause, owner="youtube.player", image=toolbar_btn_pause.png, selected=yes, style=btn_play
+=end toolbar
+
+=begin sidemenu
+=(object button: id=btn.favorite, image=btn_favorite.png, selected-image=btn_favorite_on.png, script=toggle_favorite, style=btn_sidemenu)=
+=(object button: image=btn_mirror.png, script=toggle_mirror, style=btn_sidemenu)=
+=(object button: id=btn.rate, image=btn_rate_1_0.png, script=change_rate, style=btn_sidemenu)=
+=end sidemenu
+
+=end cell

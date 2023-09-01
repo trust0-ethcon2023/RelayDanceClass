@@ -1,0 +1,41 @@
+import themes.sbss
+
+$_LOGO_IMAGE_HEIGHT = 120dp
+
+#img_logo {
+    width: $_LOGO_IMAGE_HEIGHT;
+}
+
+/catalog {
+    page-background-color: $THEME_COLOR_SPLASH_BACKGROUND;
+}
+
+if $ORIENTATION == "portrait"
+	#img_splash {
+	    width: 0.5pw;
+	    max-height: 0.9pw;
+	    position: absolute;
+	    gravity: center;
+	    y: -0.24pw;
+	}
+
+	#img_logo {
+	    position: absolute;
+	    gravity: bottom;
+	    y: -(1eb+40dp);
+	}
+else
+	#img_splash {
+	    width: 0.5ph;
+	    max-height: 0.9ph;
+	    position: absolute;
+	    gravity: center;
+	}
+
+	#img_logo {
+	    position: absolute;
+	    gravity: left-top;
+	    x: 20dp;
+	    y: 20dp;
+	}
+end

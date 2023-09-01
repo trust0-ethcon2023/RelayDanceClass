@@ -1,0 +1,3 @@
+[submodule "catalogs/MainApp/Scripts/gdrive-sheets"]
+	path = catalogs/MainApp/Scripts/gdrive-sheets
+	url = https://github.com/jamkit-modules/gdrive-sheets.git

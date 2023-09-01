@@ -1,0 +1,12 @@
+=begin cell
+
+=object image: url="https://i.ytimg.com/vi/${video-id}/hqdefault.jpg", reuse-id="hqdefault.${video-id}", \
+            style=img_cover
+
+=begin info
+=begin title
+${artist} - ${title}
+=end title
+=end info
+
+=end cell

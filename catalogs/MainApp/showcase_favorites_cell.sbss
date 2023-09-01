@@ -1,0 +1,54 @@
+import themes.sbss
+
+$_CONTENT_MARGIN = 10dp
+$_INFO_TOP_MARGIN = 2dp
+$_ARTIST_TEXT_SIZE = 1.0
+$_TITLE_TEXT_SIZE = 1.1
+$_FAVORITE_BUTTON_SIZE = 44dp
+$_FAVORITE_BUTTON_BOTTOM_MARGIN = 5dp
+
+#img_cover {
+    width: (1ph-$_CONTENT_MARGIN)*16/9;
+    height: 1ph-$_CONTENT_MARGIN;
+    position: absolute;
+    gravity: left-top;
+    scale-mode: fill;
+}
+
+#blank_line {
+    color: $THEME_COLOR_LIGHT_TEXT;
+    width: 1pw;
+    height: 1dp;
+    position: absolute;
+    gravity: bottom;
+}
+
+#btn_favorite {
+    width: $_FAVORITE_BUTTON_SIZE;
+    height: $_FAVORITE_BUTTON_SIZE;
+    position: absolute;
+    gravity: right-bottom;
+    y: -$_FAVORITE_BUTTON_BOTTOM_MARGIN;
+}
+
+/cell/info {
+    margin: $_INFO_TOP_MARGIN $_CONTENT_MARGIN 0 (1ph-$_CONTENT_MARGIN)*16/9+$_CONTENT_MARGIN;
+}
+
+/cell/info/artist {
+    font-family: @{$SANS_REGULAR};
+    font-size: $_ARTIST_TEXT_SIZE;
+    text-color: $THEME_COLOR_TEXT;
+    text-align: left;
+    line-spacing: -2dp;
+    line-break-mode: word-wrap;
+}
+
+/cell/info/title {
+    font-family: @{$SANS_MEDIUM};
+    font-size: $_TITLE_TEXT_SIZE;
+    text-color: $THEME_COLOR_TEXT;
+    text-align: left;
+    line-spacing: -2dp;
+    line-break-mode: word-wrap;
+}

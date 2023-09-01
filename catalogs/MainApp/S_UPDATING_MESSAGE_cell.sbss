@@ -1,0 +1,17 @@
+import themes.sbss
+
+$_MESSAGE_LABEL_SIDE_MARGIN = 0.1pw
+$_MESSAGE_TEXT_SIZE = 0.95
+
+#label_message {
+    width: 1pw-$$_MESSAGE_LABEL_SIDE_MARGIN*2;
+    height: 1ph;
+    position: absolute;
+    gravity: center;
+    font-family: @{$SANS_REGULAR};
+    font-size: $_MESSAGE_TEXT_SIZE;
+    text-align: center;
+    text-color: $THEME_COLOR_MESSAGE_TEXT;
+    content-border-radius: 1ph/2;
+    content-background-color: $THEME_COLOR_MESSAGE_BACKGROUND;
+}

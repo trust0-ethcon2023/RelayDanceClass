@@ -1,0 +1,17 @@
+import themes.sbss
+
+$_MESSAGE_TEXT_SIZE = 1.2
+
+/empty/content {
+    display: block;
+    position: absolute;
+    gravity: center;
+    y: -20dp;
+}
+
+/empty/content/message {
+    font-family: @{$SANS_REGULAR};
+    font-size: $_MESSAGE_TEXT_SIZE;
+    text-align: center;
+    text-color: $THEME_COLOR_TEXT;
+}

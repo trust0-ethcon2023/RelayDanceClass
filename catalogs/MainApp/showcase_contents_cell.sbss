@@ -1,0 +1,24 @@
+import themes.sbss
+
+$_INFO_TOP_MARGIN = 5dp
+$_INFO_TITLE_TEXT_SIZE = 1.1
+
+#img_cover {
+    width: 1pw;
+    height: 1pw*9/16;
+    scale-mode: fill;
+    default-color: $COLOR_DARK_WHITE;
+}
+
+/cell/info {
+    margin: $_INFO_TOP_MARGIN 0 0 0;
+}
+
+/cell/info/title {
+    font-family: @{$SANS_MEDIUM};
+    font-size: $_INFO_TITLE_TEXT_SIZE;
+    text-color: $THEME_COLOR_TEXT;
+    text-align: left;
+    line-spacing: -2dp;
+    line-break-mode: word-wrap;
+}

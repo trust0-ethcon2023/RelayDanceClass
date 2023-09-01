@@ -1,0 +1,13 @@
+{
+    id: com.tuubcast.RelayDanceClass,
+    language: en,
+    version: 1.0,
+    title: "Relay Dance Class",
+    description: "Learn K-pop dance with relay dance", 
+    localization: {
+        ko: {
+            title: "릴레이 댄스 클래스",
+            description: "릴레이 댄스로 K팝 댄스를 배워보세요"
+        }
+    }
+}

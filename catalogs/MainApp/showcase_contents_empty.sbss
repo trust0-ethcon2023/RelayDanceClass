@@ -1,0 +1,28 @@
+import themes.sbss
+
+$_CONTENT_TOP_MARGIN = 20dp
+$_MESSAGE_TEXT_SIZE = 1.2
+
+/empty/content {
+    display: block;
+    position: absolute;
+    gravity: center;
+    y: -$_CONTENT_TOP_MARGIN;
+}
+
+/empty/content/message {
+    font-family: @{$SANS_REGULAR};
+    font-size: $_MESSAGE_TEXT_SIZE;
+    text-align: center;
+    text-color: $THEME_COLOR_TEXT;
+}
+
+if $SEARCH_MODE == "yes"
+    #default.message {
+        display: none;
+    }
+else
+    #search.message {
+        display: none;
+    }
+end
